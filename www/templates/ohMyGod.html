@@ -1,0 +1,17 @@
+<ion-view title="Oh My God 最新一集" cache-view="false" id="page10">
+  <ion-content padding="true" class="has-header" ng-repeat="survey in surveys">
+    <ion-refresher pulling-text="欲更新內容，請拉下指令列..." on-refresh="loadData()"></ion-refresher>
+    <div ng-init="videourl=&quot;https://www.youtube.com/embed/&quot;+survey.omglatest_video+&quot;?rel=0&amp;showinfo=0&quot;" style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;" id="ohMyGod-video7">
+      <iframe src="{{videourl}}" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+    </div>
+    <div class="spacer" style="width: 300px; height: 24px;"></div>
+    <div id="ohMyGod-markdown14" ng-repeat="survey in surveys" class="show-list-numbers-and-dots">
+      <p style="color:#1E90E9;font-size:16px;">{{survey.omgfavorite_name}}</p>
+    </div>
+    <div class="spacer" style="width: 300px; height: 17px;"></div>
+    <div id="ohMyGod-markdown18" ng-repeat="survey in surveys" class="show-list-numbers-and-dots">
+      <p style="color:#F5A34B;font-size:17px;">{{survey.omgfavorite_comment}}</p>
+    </div>
+    <div class="spacer" style="width: 300px; height: 48px;"></div>
+  </ion-content>
+</ion-view>
