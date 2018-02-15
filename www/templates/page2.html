@@ -5,6 +5,9 @@
     </div>
     <ion-refresher pulling-text="欲更新內容，請拉下指令列..." on-refresh="loadData()"></ion-refresher>
     <div class="spacer" style="width: 300px; height: 17px;"></div>
+    <div id="page2-markdown162" ng-repeat="survey in surveys" class="show-list-numbers-and-dots">
+      <p style="color:#647BD1;">{{survey.time}}</p>
+    </div>
     <div id="page2-markdown3" ng-repeat="survey in surveys | orderBy:'-'" class="show-list-numbers-and-dots">
       <p style="color:#647BD1;font-size:16px;">{{survey.favorite_moment}}</p>
     </div>

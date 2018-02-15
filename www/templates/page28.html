@@ -1,9 +1,13 @@
 <ion-view title="漁樂新視界 最新一集" cache-view="false" id="page28">
   <ion-content padding="true" class="has-header" ng-repeat="bambino in bambinos">
     <ion-refresher pulling-text="欲更新內容，請拉下指令列..." on-refresh="loadData()"></ion-refresher>
-    <div ng-init="videourl=&quot;https://www.youtube.com/embed/&quot;+bambino.pesci_video+&quot;?rel=0&amp;showinfo=0&quot;" style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;" id="page28-video20">
-      <iframe src="{{videourl}}" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-    </div>
+    <div class="spacer" style="width: 300px; height: 24px;"></div>
+    <ion-list id="page28-list21">
+      <ion-item class="item-thumbnail-left" id="page28-list-item26" href-inappbrowser="https://www.youtube.com/watch?v={{bambino.pesci_video}}" ng-repeat="picture in pictures">
+        <img src="{{picture}}">
+        <p style="white-space:normal;">{{bambino.pesci_name}}</p>
+      </ion-item>
+    </ion-list>
     <div class="spacer" style="width: 300px; height: 24px;"></div>
     <div id="page28-markdown242" ng-repeat="bambino in bambinos" class="show-list-numbers-and-dots">
       <p style="color:#1E90E9;font-size:16px;">{{bambino.pesci_name}}</p>

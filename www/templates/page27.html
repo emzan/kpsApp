@@ -1,9 +1,13 @@
 <ion-view title="生命相對論 最新一集" cache-view="false" id="page27">
   <ion-content padding="true" class="has-header" ng-repeat="bambino in bambinos">
     <ion-refresher pulling-text="欲更新內容，請拉下指令列..." on-refresh="loadData()"></ion-refresher>
-    <div ng-init="videourl=&quot;https://www.youtube.com/embed/&quot;+bambino.donne_video+&quot;?rel=0&amp;showinfo=0&quot;" style="position:relative;overflow:hidden;padding-bottom:56.25%;height:0;" id="page27-video19">
-      <iframe src="{{videourl}}" frameborder="0" allowfullscreen="" width="560" height="315" style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-    </div>
+    <ion-list id="page27-list20">
+      <ion-item class="item-thumbnail-left" id="page27-list-item25" href-inappbrowser="https://www.youtube.com/watch?v=5XjBIOLSIa0" ng-repeat="picture in pictures">
+        <img src="{{picture}}">
+        <h2>翼下之風</h2>
+        <p>生命相對論五- 1 </p>
+      </ion-item>
+    </ion-list>
     <div class="spacer" style="width: 300px; height: 24px;"></div>
     <div id="page27-markdown240" ng-repeat="bambino in bambinos" class="show-list-numbers-and-dots">
       <p style="color:#1E90E9;font-size:16px;">{{bambino.donne_name}}</p>

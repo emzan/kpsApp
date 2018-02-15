@@ -8,7 +8,6 @@ angular.module('app.routes', [])
   // Each state's controller can be found in controllers.js
   $stateProvider
     
-  
 
       .state('tabsController.page2', {
     url: '/page2',
@@ -22,32 +21,23 @@ angular.module('app.routes', [])
 
   .state('tabsController.page3', {
     url: '/page3',
-	params: {
-		name: "",
-		favorite_sentence: "",
-		favorite_all: ""		
-},
     views: {
-      'tab2': {
+      'tab8': {
         templateUrl: 'templates/page3.html',
         controller: 'page3Ctrl'
       }
     }
   })
 
-  .state('tabsController.page4', {
+  .state('page4', {
     url: '/page4',
 	params: {
 		date: "",
 		intentions: "",
 		favorite_part: ""		
 },
-    views: {
-      'tab3': {
-        templateUrl: 'templates/page4.html',
-        controller: 'page4Ctrl'
-      }
-    }
+    templateUrl: 'templates/page4.html',
+    controller: 'page4Ctrl'
   })
 
   .state('tabsController', {
@@ -94,10 +84,10 @@ angular.module('app.routes', [])
     controller: '30Ctrl'
   })
 
-  .state('ohMyGod', {
+  .state('quiz', {
     url: '/page10',
-    templateUrl: 'templates/ohMyGod.html',
-    controller: 'ohMyGodCtrl'
+    templateUrl: 'templates/quiz.html',
+    controller: 'quizCtrl'
   })
 
   .state('page30', {
@@ -106,8 +96,24 @@ angular.module('app.routes', [])
     controller: 'page30Ctrl'
   })
 
+  .state('page35', {
+    url: '/page35',
+    templateUrl: 'templates/page35.html',
+    controller: 'page35Ctrl'
+  })
+
   .state('page26', {
     url: '/page26',
+	params: {
+		zhort: "",
+		short: "",
+		size: "",
+		sile: "",
+		tile: "",
+		kile: "",
+		lile: "",
+		cile: ""		
+},
     templateUrl: 'templates/page26.html',
     controller: 'page26Ctrl'
   })
@@ -124,10 +130,10 @@ angular.module('app.routes', [])
     controller: 'page28Ctrl'
   })
 
-  .state('page48', {
+  .state('KPS', {
     url: '/page48',
-    templateUrl: 'templates/page48.html',
-    controller: 'page48Ctrl'
+    templateUrl: 'templates/KPS.html',
+    controller: 'KPSCtrl'
   })
 
   .state('302', {
@@ -142,10 +148,10 @@ angular.module('app.routes', [])
     controller: 'page49Ctrl'
   })
 
-  .state('ohMyGod2', {
+  .state('ohMyGod', {
     url: '/page52',
-    templateUrl: 'templates/ohMyGod2.html',
-    controller: 'ohMyGod2Ctrl'
+    templateUrl: 'templates/ohMyGod.html',
+    controller: 'ohMyGodCtrl'
   })
 
   .state('page23', {
@@ -178,16 +184,28 @@ angular.module('app.routes', [])
     controller: 'page17Ctrl'
   })
 
-  .state('ohMyGod3', {
+  .state('ohMyGod2', {
     url: '/page54',
-    templateUrl: 'templates/ohMyGod3.html',
-    controller: 'ohMyGod3Ctrl'
+    templateUrl: 'templates/ohMyGod2.html',
+    controller: 'ohMyGod2Ctrl'
   })
 
   .state('page16', {
     url: '/page16',
     templateUrl: 'templates/page16.html',
     controller: 'page16Ctrl'
+  })
+
+  .state('page32', {
+    url: '/page32',
+    templateUrl: 'templates/page32.html',
+    controller: 'page32Ctrl'
+  })
+
+  .state('page37', {
+    url: '/page37',
+    templateUrl: 'templates/page37.html',
+    controller: 'page37Ctrl'
   })
 
   .state('tutorial', {
@@ -277,24 +295,10 @@ angular.module('app.routes', [])
     controller: 'page21Ctrl'
   })
 
-  .state('tabsController.page18', {
-    url: '/page18',
-    views: {
-      'tab6': {
-        templateUrl: 'templates/page18.html',
-        controller: 'page18Ctrl'
-      }
-    }
-  })
-
-  .state('tabsController.page14', {
+  .state('page14', {
     url: '/page14',
-    views: {
-      'tab7': {
-        templateUrl: 'templates/page14.html',
-        controller: 'page14Ctrl'
-      }
-    }
+    templateUrl: 'templates/page14.html',
+    controller: 'page14Ctrl'
   })
 
   .state('ftutorial', {
@@ -306,14 +310,126 @@ angular.module('app.routes', [])
     controller: 'ftutorialCtrl'
   })
 
+  .state('gtutorial', {
+    url: '/page33',
+	params: {
+		videokey: ""		
+},
+    templateUrl: 'templates/gtutorial.html',
+    controller: 'gtutorialCtrl'
+  })
+
+  .state('itutorial', {
+    url: '/page36',
+	params: {
+		videokey: ""		
+},
+    templateUrl: 'templates/itutorial.html',
+    controller: 'itutorialCtrl'
+  })
+
+  .state('htutorial', {
+    url: '/page34',
+	params: {
+		videokey: ""		
+},
+    templateUrl: 'templates/htutorial.html',
+    controller: 'htutorialCtrl'
+  })
+
   .state('page29', {
     url: '/page29',
     templateUrl: 'templates/page29.html',
     controller: 'page29Ctrl'
   })
 
+  .state('tabsController.kPS', {
+    url: '/page18',
+    views: {
+      'tab6': {
+        templateUrl: 'templates/kPS.html',
+        controller: 'kPSCtrl'
+      }
+    }
+  })
+
+  .state('imparaLItaliano', {
+    url: '/page38',
+    templateUrl: 'templates/imparaLItaliano.html',
+    controller: 'imparaLItalianoCtrl'
+  })
+
+  .state('learnEnglish', {
+    url: '/page44',
+    templateUrl: 'templates/learnEnglish.html',
+    controller: 'learnEnglishCtrl'
+  })
+
+  .state('imparaLItaliano1', {
+    url: '/page39',
+    templateUrl: 'templates/imparaLItaliano1.html',
+    controller: 'imparaLItaliano1Ctrl'
+  })
+
+  .state('imparaLItaliano2', {
+    url: '/page40',
+    templateUrl: 'templates/imparaLItaliano2.html',
+    controller: 'imparaLItaliano2Ctrl'
+  })
+
+  .state('soluzioni', {
+    url: '/page41',
+	params: {
+		choice1: "",
+		choice2: "",
+		choice3: "",
+		choice4: "",
+		choice5: ""		
+},
+    templateUrl: 'templates/soluzioni.html',
+    controller: 'soluzioniCtrl'
+  })
+
+  .state('solutions', {
+    url: '/page45',
+	params: {
+		choice1: "",
+		choice2: "",
+		choice3: "",
+		choice4: "",
+		choice5: ""		
+},
+    templateUrl: 'templates/solutions.html',
+    controller: 'solutionsCtrl'
+  })
+
+  .state('soluzioni1', {
+    url: '/page42',
+	params: {
+		choice1: "",
+		choice2: "",
+		choice3: "",
+		choice4: "",
+		choice5: ""		
+},
+    templateUrl: 'templates/soluzioni1.html',
+    controller: 'soluzioni1Ctrl'
+  })
+
+  .state('soluzioni2', {
+    url: '/page43',
+	params: {
+		choice1: "",
+		choice2: "",
+		choice3: "",
+		choice4: "",
+		choice5: ""		
+},
+    templateUrl: 'templates/soluzioni2.html',
+    controller: 'soluzioni2Ctrl'
+  })
+
 $urlRouterProvider.otherwise('/page1/page18')
 
-  
 
 });
